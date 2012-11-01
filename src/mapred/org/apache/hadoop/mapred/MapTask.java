@@ -170,7 +170,8 @@ class MapTask extends Task {
     private long bytesInCurr = -1;
     private final Statistics fsStats;
 
-    TrackedRecordReader(InputSplit split, JobConf job, TaskReporter reporter)
+    @SuppressWarnings("unchecked")
+	TrackedRecordReader(InputSplit split, JobConf job, TaskReporter reporter)
         throws IOException {
       inputRecordCounter = reporter.getCounter(MAP_INPUT_RECORDS);
       inputByteCounter = reporter.getCounter(MAP_INPUT_BYTES);
@@ -445,7 +446,8 @@ class MapTask extends Task {
     private final JobConf job;
     private final Statistics fsStats;
     
-    NewTrackingRecordReader(org.apache.hadoop.mapreduce.InputSplit split,
+    @SuppressWarnings("unchecked")
+	NewTrackingRecordReader(org.apache.hadoop.mapreduce.InputSplit split,
         org.apache.hadoop.mapreduce.InputFormat inputFormat,
         TaskReporter reporter, JobConf job,
         org.apache.hadoop.mapreduce.TaskAttemptContext taskContext)
