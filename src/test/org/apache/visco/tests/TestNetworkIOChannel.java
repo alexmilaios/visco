@@ -4,37 +4,18 @@ import static org.junit.Assert.*;
 
 import javax.crypto.SecretKey;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.compress.CompressionCodec;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.ReduceTask;
-import org.apache.hadoop.mapred.ReduceTask.ReduceCopier;
-import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.Counters.Counter;
 import org.apache.hadoop.mapred.ReduceTask.ReduceCopier.MapOutputLocation;
 import org.junit.Before;
 import org.junit.Test;
 import junit.framework.Assert;
-import helperClasses.MockInteger;
-import helperClasses.MockJobConf;
-import helperClasses.MockReporter;
-import helperClasses.MockString;
-import helperClasses.WordCount;
+import org.apache.visco.helperClasses.*;
 import visco.util.*;
 
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.conf.Configured;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.io.compress.CompressionCodec;
-import org.apache.hadoop.io.serializer.SerializationFactory;
-import org.apache.hadoop.mapred.Counters.Counter;
-import org.apache.hadoop.mapred.IFile;
-import org.apache.hadoop.mapred.JobConf;
-import org.junit.Before;
-import org.junit.Test;
-
-
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import org.apache.hadoop.io.IntWritable;
@@ -51,7 +32,6 @@ public class TestNetworkIOChannel {
 	
 	/* Constructor arguments */
 	public JobConf jobConf;
-	public MapOutputLocation inputLocation;
 	public ReduceTask.ReduceCopier<MockString, MockInteger> reduceCopier;
 	public SecretKey jobTokenSecret;
 	public CompressionCodec codec;
@@ -59,7 +39,6 @@ public class TestNetworkIOChannel {
 	public int reduce;
 	public MockReporter reporter; 
 	
-	NetworkIOChannel realNetworkIOChannel;
 
 	@Before
 	public void setUp() throws Exception {
@@ -88,6 +67,7 @@ public class TestNetworkIOChannel {
 		//reporter
 		reporter = new MockReporter();
 		
+		MapOutputLocation inputLocation = null;
 		//Construct our DiskToIOChannel!!!
 		//realNetworkIOChannel = 
 		new NetworkIOChannel(jobConf, inputLocation, jobTokenSecret, codec, counter, reduce, reporter);

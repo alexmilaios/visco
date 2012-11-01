@@ -1,8 +1,8 @@
 package org.apache.visco.tests;
 
 import static org.junit.Assert.assertEquals;
-import helperClasses.MockInteger;
-import helperClasses.MockString;
+import org.apache.visco.helperClasses.MockInteger;
+import org.apache.visco.helperClasses.MockString;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -37,7 +37,7 @@ public class TestNonBlockingQueue {
 		threadPool = Executors.newCachedThreadPool();
 
 		child = new MergingTask<MockString, MockInteger>(null, null, null,
-				threadPool, null);
+				threadPool, null, null, false);
 
 		enqueueMaybePossible = new ActionDelegate() {
 

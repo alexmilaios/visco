@@ -3,8 +3,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import helperClasses.MockInteger;
-import helperClasses.MockString;
+import org.apache.visco.helperClasses.MockInteger;
+import org.apache.visco.helperClasses.MockString;
 
 import java.util.ArrayList;
 
@@ -59,12 +59,12 @@ public class TestIOChannelBuffer {
 		mockIntegers.add(one);
 		mockIntegers.add(two);
 		
-		realIOChannelBufferOne = new IOChannelBuffer<MockString, MockInteger>(2);
-		realIOChannelBufferTwo = new IOChannelBuffer<MockString, MockInteger>(2);
-		realIOChannelBufferThree = new IOChannelBuffer<MockString, MockInteger>(2);
-		realIOChannelBufferFour = new IOChannelBuffer<MockString, MockInteger>(2);
-		realIOChannelBufferFive = new IOChannelBuffer<MockString, MockInteger>(2);
-		realIOChannelBufferFalse = new IOChannelBuffer<MockString, MockInteger>(2);
+		realIOChannelBufferOne = new IOChannelBuffer<MockString, MockInteger>(2, null);
+		realIOChannelBufferTwo = new IOChannelBuffer<MockString, MockInteger>(2, null);
+		realIOChannelBufferThree = new IOChannelBuffer<MockString, MockInteger>(2, null);
+		realIOChannelBufferFour = new IOChannelBuffer<MockString, MockInteger>(2, null);
+		realIOChannelBufferFive = new IOChannelBuffer<MockString, MockInteger>(2, null);
+		realIOChannelBufferFalse = new IOChannelBuffer<MockString, MockInteger>(2, null);
 		
 	}
 	

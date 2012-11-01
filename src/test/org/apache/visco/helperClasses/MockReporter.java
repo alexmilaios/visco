@@ -1,4 +1,4 @@
-package helperClasses;
+package org.apache.visco.helperClasses;
 
 import org.apache.hadoop.mapred.InputSplit;
 import org.apache.hadoop.mapred.Reporter;

@@ -43,7 +43,7 @@ import visco.util.ActionDelegate;
 import static org.mockito.Mockito.*;
 //mockito imports
 
-import helperClasses.*;
+import org.apache.visco.helperClasses.*;
 
 
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,11 @@ public class TestMergingTask {
 		
 		//Mocks and stubs
 		when( mockMemoryIOChannel.GetEmpty(null) ).thenReturn(
-				new IOChannelBuffer<MockString, MockInteger>(2));
+				new IOChannelBuffer<MockString, MockInteger>(2, null) );
 		
 		//Construct the MergingTask object
-		realMergingTask = new MergingTask<MockString, MockInteger>(null, null, null, threadPool, reporter); 
+		
+		realMergingTask = new MergingTask<MockString, MockInteger>(null, null, null, threadPool, null, reporter, false); 
 		
     }
 	

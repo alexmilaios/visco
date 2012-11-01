@@ -1,4 +1,4 @@
-package helperClasses;
+package org.apache.visco.helperClasses;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

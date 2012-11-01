@@ -1,4 +1,4 @@
-package helperClasses;
+package org.apache.visco.helperClasses;
 
 import java.io.IOException;
 import java.util.Iterator;

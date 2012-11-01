@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package helperClasses;
+package org.apache.visco.helperClasses;
 
 import org.apache.hadoop.io.*;
 import java.io.IOException;

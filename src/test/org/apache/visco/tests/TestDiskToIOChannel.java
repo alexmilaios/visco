@@ -2,11 +2,7 @@ package org.apache.visco.tests;
 //package visco.core.merge;
 
 import junit.framework.Assert;
-import helperClasses.MockInteger;
-import helperClasses.MockJobConf;
-import helperClasses.MockReporter;
-import helperClasses.MockString;
-import helperClasses.WordCount;
+import org.apache.visco.helperClasses.*;
 import visco.util.*;
 
 import org.apache.hadoop.fs.FileSystem;

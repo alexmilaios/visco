@@ -4,7 +4,7 @@ package org.apache.visco.tests;
 
 import static org.junit.Assert.*;
 
-import helperClasses.*;
+import org.apache.visco.helperClasses.*;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
@@ -24,7 +24,7 @@ import visco.util.*;
 public class TestMemoryIOChannel {
 
 	public IOChannelBuffer<MockString, MockInteger> item = new IOChannelBuffer<MockString, MockInteger>(
-			1);
+			1, null);
 
 	public Executor threadPool;
 	public JobConf jobConf; 
@@ -103,7 +103,7 @@ public class TestMemoryIOChannel {
 
 			@Override
 			public IOChannelBuffer<MockString, MockInteger> Func() {
-				return new IOChannelBuffer<MockString, MockInteger>(10);
+				return new IOChannelBuffer<MockString, MockInteger>(10, null);
 			}
 
 		};

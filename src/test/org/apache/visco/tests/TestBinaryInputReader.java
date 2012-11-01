@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.net.URL;
 
-import helperClasses.MockJobConf;
+import org.apache.visco.helperClasses.MockJobConf;
 
 import javax.crypto.SecretKey;
 
