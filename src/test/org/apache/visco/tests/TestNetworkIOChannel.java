@@ -1,32 +1,28 @@
 package org.apache.visco.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import javax.crypto.SecretKey;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.compress.CompressionCodec;
+import org.apache.hadoop.mapred.Counters.Counter;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.ReduceTask;
-import org.apache.hadoop.mapred.Counters.Counter;
 import org.apache.hadoop.mapred.ReduceTask.ReduceCopier.MapOutputLocation;
+import org.apache.visco.helperClasses.MockInteger;
+import org.apache.visco.helperClasses.MockReporter;
+import org.apache.visco.helperClasses.MockString;
+import org.apache.visco.helperClasses.WordCount;
 import org.junit.Before;
 import org.junit.Test;
-import junit.framework.Assert;
-import org.apache.visco.helperClasses.*;
-import visco.util.*;
 
-import static org.mockito.Mockito.*;
-
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.RawComparator;
-import org.apache.hadoop.io.Text;
-
+import visco.core.merge.NetworkIOChannel;
 //import WordCount;
 //import WordCount.MapClass;
 //import WordCount.Reduce;
-
-import visco.core.merge.*;
 
 public class TestNetworkIOChannel {
 	

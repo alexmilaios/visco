@@ -1,12 +1,12 @@
 package org.apache.visco.tests;
 
 import static org.junit.Assert.assertEquals;
-import org.apache.visco.helperClasses.MockInteger;
-import org.apache.visco.helperClasses.MockString;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+import org.apache.visco.helperClasses.MockInteger;
+import org.apache.visco.helperClasses.MockString;
 import org.junit.Before;
 import org.junit.Test;
 

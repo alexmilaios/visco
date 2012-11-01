@@ -1,8 +1,8 @@
 package org.apache.visco.helperClasses;
 
+import org.apache.hadoop.mapred.Counters.Counter;
 import org.apache.hadoop.mapred.InputSplit;
 import org.apache.hadoop.mapred.Reporter;
-import org.apache.hadoop.mapred.Counters.Counter;
 
 public class MockReporter implements Reporter{
 	
