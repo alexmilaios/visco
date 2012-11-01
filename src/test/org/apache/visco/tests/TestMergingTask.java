@@ -1,9 +1,7 @@
-package tests;
+package org.apache.visco.tests;
 //package visco.core.merge;
 
 import static org.junit.Assert.*;
-
-import helperClasses.MockReporter;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -45,6 +43,8 @@ import visco.util.ActionDelegate;
 import static org.mockito.Mockito.*;
 //mockito imports
 
+import helperClasses.*;
+
 
 ////////////////////////////////////////////////////////////////////
 //Remember to try setting up the objects either in setUp,
@@ -53,21 +53,35 @@ import static org.mockito.Mockito.*;
 ////////////////////////////////////////////////////////////////////
 
 
-public class FinalOutputChannelTest {
-	
-	public JobConf jobConf;
-	public MockReporter reporter;
+public class TestMergingTask {
+	public MockString hello = new MockString("Hello");
+	public MockInteger one = new MockInteger(1);
+	public MockInteger two = new MockInteger(1);
 
+	public Executor threadPool;
+	public MockReporter reporter;
+	
+	public MergingTask<MockString, MockInteger> realMergingTask;
+	
+	MemoryIOChannel<MockString,MockInteger> mockMemoryIOChannel = mock(MemoryIOChannel.class);
+		
 	@Before
 	public void setUp() throws Exception {
-		
+		threadPool = Executors.newCachedThreadPool();
 		reporter = new MockReporter();
-		jobConf = new JobConf(new Configuration(), WordCount.class);
+		
+		//Mocks and stubs
+		when( mockMemoryIOChannel.GetEmpty(null) ).thenReturn(
+				new IOChannelBuffer<MockString, MockInteger>(2));
+		
+		//Construct the MergingTask object
+		realMergingTask = new MergingTask<MockString, MockInteger>(null, null, null, threadPool, reporter); 
 		
     }
 	
 	@Test
-	public void someTest() {
+	public void testRun() {
+		//realMergingTask.run();
 	}
 
 }

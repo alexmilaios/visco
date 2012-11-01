@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 //package visco.core.merge;
 
 import junit.framework.Assert;
@@ -43,7 +43,7 @@ import visco.core.merge.*;
 ////////////////////////////////////////////////////////////////////
 
 
-public class DiskToIOChannelTest {
+public class TestDiskToIOChannel {
 	
 	/* Constructor arguments */
 	//public JobConf jobConf; //done

@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 import org.junit.Before;
 import static org.junit.Assert.*;
@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import visco.util.ModifiableBoolean;
 
-public class ModifiableBooleanTest {
+public class TestModifiableBoolean {
 
 	boolean actualMB;
 	boolean expectedMB;

@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 import static org.junit.Assert.*;
 
@@ -21,7 +21,7 @@ import org.junit.Test;
 
 import visco.core.io.BinaryInputReader;
 
-public class BinaryInputReaderTest {
+public class TestBinaryInputReader {
 
 	MockJobConf jobConf;
 	BinaryInputReader test;

@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 import static org.junit.Assert.*;
 
@@ -47,7 +47,7 @@ import org.apache.hadoop.io.Text;
 
 import visco.core.merge.*;
 
-public class NetworkIOChannelTest {
+public class TestNetworkIOChannel {
 	
 	/* Constructor arguments */
 	public JobConf jobConf;

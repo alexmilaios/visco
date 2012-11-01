@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
@@ -22,7 +22,7 @@ import visco.core.merge.IOChannelBuffer;
 ////////////////////////////////////////////////////////////////////
 
 
-public class IOChannelBufferTest {
+public class TestIOChannelBuffer {
 	//mockPath created to verify that Mockito works
 	Path mockPath = mock(Path.class);
 

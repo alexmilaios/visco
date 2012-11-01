@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 import static org.junit.Assert.assertNotNull;
 import helperClasses.*;
@@ -31,7 +31,7 @@ import visco.core.merge.MergingTask;
 import visco.core.merge.MergingTree;
 import visco.util.ActionDelegate;
 
-public class MergingTreeTest {
+public class TestMergingTree {
 	// create jobConf
 	MockJobConf jobConf;
 	// create fs

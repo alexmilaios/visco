@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 //package visco.core.merge;
 
@@ -21,7 +21,7 @@ import visco.core.merge.MemoryIOChannel;
 import visco.core.merge.NonBlockingQueue;
 import visco.util.*;
 
-public class MemoryIOChannelTest {
+public class TestMemoryIOChannel {
 
 	public IOChannelBuffer<MockString, MockInteger> item = new IOChannelBuffer<MockString, MockInteger>(
 			1);

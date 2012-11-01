@@ -1,4 +1,4 @@
-package tests;
+package org.apache.visco.tests;
 
 import static org.junit.Assert.assertEquals;
 import helperClasses.MockInteger;
@@ -15,7 +15,7 @@ import visco.core.merge.NonBlockingQueue;
 import visco.util.ActionDelegate;
 import visco.util.ModifiableBoolean;
 
-public class NonBlockingQueueTest {
+public class TestNonBlockingQueue {
 
 	public ActionDelegate enqueueMaybePossible;
 	public ActionDelegate dequeueMaybePossible;
