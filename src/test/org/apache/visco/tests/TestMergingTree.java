@@ -1,35 +1,22 @@
 package org.apache.visco.tests;
 
 import static org.junit.Assert.assertNotNull;
-import org.apache.visco.helperClasses.*;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import javax.crypto.SecretKey;
-
 import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.compress.CompressionCodec;
-import org.apache.hadoop.mapred.Counters;
-import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.ReduceTask;
-import org.apache.hadoop.mapred.Reporter;
-import org.apache.hadoop.mapred.Task;
-import org.apache.hadoop.mapred.TaskTracker;
-import org.apache.hadoop.mapred.ReduceTask.ReduceCopier;
 import org.apache.hadoop.mapred.ReduceTask.ReduceCopier.MapOutputLocation;
-import org.apache.hadoop.mapred.TaskAttemptID; 
-import org.apache.hadoop.mapreduce.Counter;
+import org.apache.hadoop.mapred.TaskTracker;
+import org.apache.visco.helperClasses.MockJobConf;
 import org.junit.Before;
 import org.junit.Test;
 
 import visco.core.merge.MergingTask;
 import visco.core.merge.MergingTree;
-import visco.util.ActionDelegate;
 
 public class TestMergingTree {
 	// create jobConf

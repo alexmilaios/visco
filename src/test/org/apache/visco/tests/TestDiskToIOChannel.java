@@ -1,36 +1,22 @@
 package org.apache.visco.tests;
 //package visco.core.merge;
 
-import junit.framework.Assert;
-import org.apache.visco.helperClasses.*;
-import visco.util.*;
-
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.conf.Configured;
-import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.compress.CompressionCodec;
-import org.apache.hadoop.io.serializer.SerializationFactory;
 import org.apache.hadoop.mapred.Counters.Counter;
-import org.apache.hadoop.mapred.IFile;
 import org.apache.hadoop.mapred.JobConf;
+import org.apache.visco.helperClasses.MockReporter;
+import org.apache.visco.helperClasses.WordCount;
 import org.junit.Before;
 import org.junit.Test;
 
-
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.RawComparator;
-import org.apache.hadoop.io.Text;
-
-//import WordCount;
-//import WordCount.MapClass;
-//import WordCount.Reduce;
-
-import visco.core.merge.*;
-
+import visco.core.merge.DiskToIOChannel;
+import visco.core.merge.IOChannelBuffer;
+import visco.util.ModifiableBoolean;
 
 ////////////////////////////////////////////////////////////////////
 //Remember to try setting up the objects either in setUp,

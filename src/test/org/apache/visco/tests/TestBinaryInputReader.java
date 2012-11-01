@@ -8,8 +8,6 @@ import org.apache.visco.helperClasses.MockJobConf;
 
 import javax.crypto.SecretKey;
 
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.io.compress.CompressionCodec;
 import org.apache.hadoop.mapred.Counters;
 import org.apache.hadoop.mapred.ReduceTask;
 import org.apache.hadoop.mapred.ReduceTask.ReduceCopier;

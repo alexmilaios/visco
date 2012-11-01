@@ -14,7 +14,6 @@ import org.junit.Test;
 
 import visco.core.merge.IOChannelBuffer;
 
-
 ////////////////////////////////////////////////////////////////////
 //Remember to try setting up the objects either in setUp,
 //or in the respective test itself, since for some unknown reason

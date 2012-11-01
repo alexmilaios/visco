@@ -11,7 +11,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapreduce.TaskAttemptID;
 import org.junit.Before;
 import org.junit.Test;
